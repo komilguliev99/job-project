@@ -1,0 +1,19 @@
+.Filter {
+	padding: 30px 0;
+
+	&__input-group {
+		display: flex;
+
+		& > input {
+			&,
+			&:focus {
+				outline: none !important;
+				box-shadow: none;
+			}
+		}
+
+		& button {
+			transform: translateX(-5px)
+		}
+	}
+}

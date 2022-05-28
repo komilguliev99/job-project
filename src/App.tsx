@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.scss';
 import { Home } from './layers/Home/Home';
-import Posts from './layers/Posts/Posts';
+import Posts from './layers/Posts';
 import { IPostsState, IPostsData, IPost } from './store/posts/index.typing';
 
 interface IAppProps {

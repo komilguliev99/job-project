@@ -1,0 +1,21 @@
+.Pagination {
+	display: flex;
+
+	&__btn {
+		font-size: 16px;
+		font-weight: 500;
+		padding: 5px 10px;
+		border: 2px solid #0275d8;
+		box-sizing: border-box;
+		margin-right: 5px;
+		border-radius: 3px;
+		min-width: 40px;
+		color: #0275d8;
+		cursor: pointer;
+
+		&_active {
+			background: #0275d8;
+			color: #fff;
+		}
+	}
+}
