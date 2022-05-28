@@ -5,18 +5,45 @@
         "plugin:@typescript-eslint/recommended"
     ],
     "parser": "@typescript-eslint/parser",
-    "parserOptions": { "project": ["./tsconfig.json"] },
+	"overrides": [
+		{
+		  "files": ["*.ts", "*.tsx"], // Your TypeScript files extension
+		  "extends": [
+			"plugin:@typescript-eslint/recommended",
+		  ],
+		  "parserOptions": {
+			"project": ["./tsconfig.json"], // Specify it only for TypeScript files
+		  },
+		},
+	  ],
     "plugins": [
         "@typescript-eslint"
     ],
     "rules": {
+		"@typescript-eslint/ban-types": [
+			"error",
+			{
+			  "extendDefaults": true,
+			  "types": {
+				"{}": false
+			  }
+			}
+		],
         "@typescript-eslint/strict-boolean-expressions": [
             2,
             {
                 "allowString" : false,
                 "allowNumber" : false
             }
-        ]
+        ],
+		"indent": [ 1, 4 ],
+        "jsx-quotes": [ 1, "prefer-double" ],
+        "linebreak-style": [ 1, "unix" ],
+        "lines-around-comment": [ 1, { "beforeBlockComment": true } ],
+        "max-depth": [ 1, 8 ],
+        "max-len": [ 1, 132 ],
+        "max-nested-callbacks": [ 1, 8 ],
+        "max-params": [ 1, 8 ]
     },
     "ignorePatterns": ["src/**/*.test.tsx"]
 }
