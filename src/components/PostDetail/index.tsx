@@ -1,14 +1,14 @@
-import React, { FC } from 'react';
-import StaticImage from '../../assets/img/static_image.jpg';
+import React, { FC } from 'react'
+import StaticImage from '../../assets/img/static_image.jpg'
 import './index.scss'
 
 interface IPostDetail {
-	title: string;
-	body: string;
+  title: string;
+  body: string;
 }
 
 export const PostDetail: FC<IPostDetail> = ({ title, body }) => {
-    return (
+  return (
         <div className="PostDetail">
             <div className="row">
                 <div className="col-lg-4 col-md-6">
@@ -20,5 +20,5 @@ export const PostDetail: FC<IPostDetail> = ({ title, body }) => {
                 </div>
             </div>
         </div>
-    )
+  )
 }

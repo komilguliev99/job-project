@@ -1,15 +1,14 @@
 {
     "root": true,
     "extends": [
-        "eslint:recommended",
-        "plugin:@typescript-eslint/recommended"
+        "standard"
     ],
     "parser": "@typescript-eslint/parser",
 	"overrides": [
 		{
 		  "files": ["*.ts", "*.tsx"], // Your TypeScript files extension
 		  "extends": [
-			"plugin:@typescript-eslint/recommended",
+			"standard",
 		  ],
 		  "parserOptions": {
 			"project": ["./tsconfig.json"], // Specify it only for TypeScript files
@@ -32,8 +31,9 @@
         "@typescript-eslint/strict-boolean-expressions": [
             2,
             {
-                "allowString" : false,
-                "allowNumber" : false
+              "allowNumber" : true,
+				      "allowNullableBoolean": true,
+              "allowNullableString": true
             }
         ],
 		"indent": [ 1, 4 ],
